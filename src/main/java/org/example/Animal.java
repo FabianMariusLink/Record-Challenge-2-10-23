@@ -5,15 +5,17 @@ public record Animal(
         String name,
         String kindOf,
         int age,
-        Owner owner
+        Owner owner,
+        Species species
 ) {
-    public Animal withOwner(Owner owner){
+    public Animal withOwnerAndSpecies(Owner owner, Species species){
         return new Animal(
                 this.id,
                 this.name,
                 this.kindOf,
                 this.age,
-                owner
+                owner,
+                species
         );
     }
 
