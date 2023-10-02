@@ -2,9 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Animal animal1 = new Animal("1", "Tiger1", "African animal", 12,new Owner("name1",71,"address1"), new Species("Species1", 200));
-        Animal animal2  = new Animal("2", "Lion1", "South African lion", 7,null, new Species("Species1", 200));
-        Animal animal3 = new Animal("3", "Elephant1", "Indian elephant", 15,null, new Species("Species2", 300));
+        Animal animal1 = new Animal("1", "Tiger1", "African animal", 12,new Owner("name1",71,"address1"), new Species("Species1", 10000));
+        Animal animal2  = new Animal("2", "Lion1", "South African lion", 7,null, new Species("Species1", 10000));
+        Animal animal3 = new Animal("3", "Elephant1", "Indian elephant", 15,null, new Species("Species2", 150000));
 
         //Owner owner1 = new Owner ("owner1", 44, "address1"); DIREKT IN DER INSTANZIIERUNG VON animal1
         Owner owner2 = new Owner ("owner2", 32, "address2");
@@ -25,6 +25,13 @@ public class Main {
 
         //Species species1 = new Species("Species1", 200);
         //Species species2 = new Species("Species2", 300);
+        Animal animalWithNewName = animal1.withName("Big Tiger1");
+        System.out.println(animalWithNewName);
 
+        Animal animalWithKindOf = animal2.withKindOf("German Lion");
+        System.out.println(animalWithKindOf);
+
+        Animal animalAge = animal3.withAge(104);
+        System.out.println(animalWithKindOf);
     }
 }
